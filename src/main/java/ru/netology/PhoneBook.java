@@ -45,7 +45,7 @@ public class PhoneBook {
 
     public List<String> printAllNames() {
         List<String> name = new ArrayList<>();
-        for (Map.Entry<String, String> entry: listContacts.entrySet()){
+        for (Map.Entry<String, String> entry : listContacts.entrySet()) {
             name.add(entry.getKey());
         }
         return name;
