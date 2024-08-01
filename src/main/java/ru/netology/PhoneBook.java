@@ -32,15 +32,9 @@ public class PhoneBook {
         return name;
     }
 
-//    public static void main(String[] args) {
-//        PhoneBook phoneBook = new PhoneBook();
-//        phoneBook.add("Маша", "9034568723");
-//        phoneBook.add("Паша", "9056782309");
-//        phoneBook.add("Анна", "9030984681");
-//        phoneBook.add("Маша", "9050927823");
-////        System.out.println(phoneBook.countContacts);
-////        System.out.println(phoneBook.findByNumber("90509"));
-//    }
+    public String findByName(String number){
 
+        return null;
+    }
 
 }

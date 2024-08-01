@@ -31,6 +31,15 @@ public class PhoneBookTest {
         Assertions.assertEquals("Паша\n", resultName);
     }
 
-    
+    @ParameterizedTest
+    @CsvSource({"Анна, 9030984681"})
+    public void findByName(String name, String number) {
+        PhoneBook phoneBook1 = new PhoneBook();
+        String resultName;
+        phoneBook1.add(name, number);
+        resultName = phoneBook1.findByName(name);
+        Assertions.assertEquals("9030984681\n", resultName);
+    }
 
-}
+
+    }
