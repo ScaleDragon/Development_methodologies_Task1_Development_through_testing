@@ -32,9 +32,14 @@ public class PhoneBook {
         return name;
     }
 
-    public String findByName(String number){
-
-        return null;
+    public String findByName(String name){
+        String number = "";
+        for (Map.Entry<String, String> entry: listContacts.entrySet()){
+            if (entry.getValue().contains(name)){
+                number+= entry.getValue()+"\n";
+            }
+        }
+        return name;
     }
 
 }

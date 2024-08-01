@@ -35,10 +35,10 @@ public class PhoneBookTest {
     @CsvSource({"Анна, 9030984681"})
     public void findByName(String name, String number) {
         PhoneBook phoneBook1 = new PhoneBook();
-        String resultName;
+        String resultNumber;
         phoneBook1.add(name, number);
-        resultName = phoneBook1.findByName(name);
-        Assertions.assertEquals("9030984681\n", resultName);
+        resultNumber = phoneBook1.findByName(number);
+        Assertions.assertEquals("9030984681", resultNumber);
     }
 
 
