@@ -14,23 +14,33 @@ public class PhoneBook {
         if (!listContacts.containsKey(name)) {
             listContacts.put(name, number);
             countContacts++;
-        } else {
+        }
+        else {
             System.out.println("Такое имя уже есть в списке контактов");
         }
         return countContacts;
     }
 
     public String findByNumber(String number) {
-        return null;
+        String name = "";
+        String subString = number.substring(0);
+        for (Map.Entry<String, String> entry: listContacts.entrySet()){
+            if (entry.getValue().contains(subString)){
+                name+= entry.getKey()+"\n";
+            }
+        }
+        return name;
     }
 
 //    public static void main(String[] args) {
 //        PhoneBook phoneBook = new PhoneBook();
 //        phoneBook.add("Маша", "9034568723");
-//        phoneBook.add("Bfgf", "9056782309");
-//        phoneBook.add("wEsd", "9030984681");
-//        phoneBook.add("Мша", "9050927823");
-//        System.out.println(phoneBook.countContacts);
+//        phoneBook.add("Паша", "9056782309");
+//        phoneBook.add("Анна", "9030984681");
+//        phoneBook.add("Маша", "9050927823");
+////        System.out.println(phoneBook.countContacts);
+////        System.out.println(phoneBook.findByNumber("90509"));
 //    }
+
 
 }
