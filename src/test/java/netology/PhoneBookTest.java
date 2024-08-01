@@ -1,6 +1,7 @@
 package netology;
 
 import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 import ru.netology.PhoneBook;
@@ -41,5 +42,14 @@ public class PhoneBookTest {
         Assertions.assertEquals("9030984681", resultNumber);
     }
 
-
+    @Test
+    public void printAllNames() {
+        PhoneBook phoneBook1 = new PhoneBook();
+        phoneBook1.add("Маша", "9034568723");
+        phoneBook1.add("Паша", "9056782309");
+        phoneBook1.add("Анна", "9030984681");
+        List<String> listName = phoneBook1.printAllNames();
+        List<String> ex = new ArrayList<>(Arrays.asList("Анна", "Маша", "Паша"));
+        Assertions.assertEquals(ex, listName);
     }
+}
